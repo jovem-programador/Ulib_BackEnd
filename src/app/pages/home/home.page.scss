@@ -1,0 +1,27 @@
+ion-grid {
+    text-align: center;
+}
+
+ion-grid fa-icon {
+    font-size: 1.5rem;
+}
+
+ion-grid small {
+    display: block;
+}
+
+ion-col div {
+    background   : steelblue;
+    padding      : .5rem;
+    border-radius: .4rem;
+    cursor       : pointer;
+}
+
+ion-col div:hover {
+    background: orangered;
+}
+
+h4 {
+    font-size  : 1.1rem;
+    font-weight: bold;
+}

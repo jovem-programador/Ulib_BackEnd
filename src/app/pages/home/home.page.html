@@ -1,0 +1,176 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Início</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-padding">
+
+    <h2 class="ion-no-margin">Olá<span *ngIf="userData"> {{ userData.displayName }}</span>!</h2>
+
+    <p>Este é um aplicativo modelo de cadastro de usuários e de troca de mensagens entre estes usuários.</p>
+
+    <div *ngIf="!userData" class="ion-margin-bottom">
+      <hr>
+      <h3>Logue-se!</h3>
+      <p>Para usar todos os recursos deste aplicativo, você precisa se identificar.</p>
+
+      <h4>Ações</h4>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div routerLink="/user/login">
+              <fa-icon icon="sign-in-alt"></fa-icon>
+              <small>Entrar / Login</small>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div routerLink="/contacts">
+              <fa-icon icon="comments"></fa-icon>
+              <small>Contatos</small>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div routerLink="/info">
+              <fa-icon icon="info-circle"></fa-icon>
+              <small>Sobre</small>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+
+
+
+    </div>
+
+    <div *ngIf="userData">
+
+      <h4>Ações</h4>
+
+      <ion-grid>
+        <ion-row>
+
+          <ion-col>
+            <div routerLink="/user/profile">
+              <fa-icon icon="id-card"></fa-icon>
+              <small>Ver Perfil</small>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div routerLink="/user/logout">
+              <fa-icon icon="sign-out-alt"></fa-icon>
+              <small>Logout</small>
+            </div>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <div routerLink="/contacts">
+              <fa-icon icon="comments"></fa-icon>
+              <small>Contatos</small>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div routerLink="/info">
+              <fa-icon icon="info-circle"></fa-icon>
+              <small>Sobre</small>
+            </div>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+      <h4>Mensagens</h4>
+
+      <ion-grid>
+        <ion-row>
+
+          <ion-col>
+            <div routerLink="/msg/inbox">
+              <fa-icon icon="mail-bulk"></fa-icon>
+              <small>Recebidas</small>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div routerLink="/msg/outbox">
+              <fa-icon icon="inbox"></fa-icon>
+              <small>Enviadas</small>
+            </div>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <div routerLink="/msg/send">
+              <fa-icon icon="paper-plane"></fa-icon>
+              <small>Nova</small>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+
+    <div>
+
+      <h4>Links Externos</h4>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div (click)="openSite('https://luferat.net/')">
+              <fa-icon icon="chalkboard-teacher"></fa-icon>
+              <small>Professor</small>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div (click)="openSite('https://www.pi2c.tk/')">
+              <fa-icon icon="sitemap"></fa-icon>
+              <small>Documentação</small>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <div (click)="openSite('https://github.com/Luferat/SLTec-ionic-firebase-06')">
+              <fa-icon [icon]="['fab', 'github']"></fa-icon>
+              <small>GitHub.com</small>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div (click)="openSite('https://luferat.github.io/SLTec-ionic-firebase-06/')">
+              <fa-icon icon="globe"></fa-icon>
+              <small>Versão Web</small>
+            </div>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </div>
+
+  </div>
+
+</ion-content>
